@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<!-- TODO: 1. Set the page <title> to be "{{sitename}} | {{title}}" -->
+	<title>{{sitename}} | {{title}}</title>
 	<link rel="stylesheet" href="/style.css">
 	<meta name="viewport" content="width=device-width">
 </head>
@@ -12,7 +13,9 @@
 	<header>
 		<h1><a href="/">
 			<!-- TODO 2. Use sitename for the page heading -->
-		</a></h1>
+		</a></h1><a href="/">
+			{{sitename}}
+		</a>
 
 		<p class="tagline">
 			A curated list of the very best books in all the world.
@@ -20,9 +23,10 @@
 	</header>
 	<main>
 		<!-- TODO 3: Include the body here -->
+		{{{body}}}
 	</main>
 	<footer>
-		<p><small><a href="TODO 4. Link to the source code URL.">View source code on GitHub</a></small></p>
+		<p><small><a href="{{source_url}}">View source code on GitHub</a></small></p>
 	</footer>
 </body>
 

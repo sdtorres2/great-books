@@ -48,6 +48,15 @@ app.post('/', function(req, res) {
   var titleSubmitted = req.body && req.body.title && req.body.title.trim();
   if(titleSubmitted) {
     // TODO: Don't add duplicate titles
+    //stack overflow guide
+    booklist.push({
+      title: req.body.title
+    });
+     var duplicate = 0; 
+     for (var prop in booklist){ if(booklist[prop].title === titleSubmitted)
+      duplicate = 1;
+  }
+  if(!duplicate)
     booklist.push({
       title: req.body.title
     });
